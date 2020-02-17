@@ -1,0 +1,11 @@
+FROM node:alpine
+
+WORKDIR ./app
+
+COPY ./package.json .
+RUN yarn
+
+COPY . .
+
+CMD ["yarn","start","|","say","let's go baby i'm ready to rock !"]
+

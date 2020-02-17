@@ -4,6 +4,10 @@ import App from './App';
 
 test('renders learn react link', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
+  const linkElement = getByText(/Yo petit test de docker volumes/i);
   expect(linkElement).toBeInTheDocument();
+});
+
+test('renders learn react link', () => {
+  console.log('hello');
 });
