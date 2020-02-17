@@ -2,4 +2,7 @@ sudo: required
 services:
   - docker
 before_install:
-  - docker build -f Dockerfile.dev -t loisbn/docker-react:latest .
+  - docker build -f Dockerfile.dev -t loisbn/docker-react .
+
+script:
+  - docker run -e CI=true loisbn/docker-react npm run test
